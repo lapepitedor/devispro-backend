@@ -1,0 +1,118 @@
+### 1. Health check
+GET http://localhost:3001/api/health
+
+###
+
+### 2. Register
+POST http://localhost:3001/api/auth/register
+Content-Type: application/json
+
+{
+  "email": "test@devispro.de",
+  "password": "motdepasse123",
+  "company": "Klempnerei Test",
+  "lang": "de"
+}
+
+###
+
+### 3. Login → copie le token reçu !
+POST http://localhost:3001/api/auth/login
+Content-Type: application/json
+
+{
+  "email": "test@devispro.de",
+  "password": "motdepasse123"
+}
+
+###
+
+### 4. Me (remplace TON_TOKEN par le token reçu au login)
+GET http://localhost:3001/api/auth/me
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiZW1haWwiOiJ0ZXN0QGRldmlzcHJvLmRlIiwiY29tcGFueSI6IktsZW1wbmVyZWkgVGVzdCIsImlhdCI6MTc3NzQ1NjIyNCwiZXhwIjoxNzc4MDYxMDI0fQ.hvFijjdVTM86oFnL22oaGPDmMzGBoFQOUlyghpv8GNk
+
+###
+
+### 5. Créer un devis
+POST http://localhost:3001/api/devis
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiZW1haWwiOiJ0ZXN0QGRldmlzcHJvLmRlIiwiY29tcGFueSI6IktsZW1wbmVyZWkgVGVzdCIsImlhdCI6MTc3NzQ1NjIyNCwiZXhwIjoxNzc4MDYxMDI0fQ.hvFijjdVTM86oFnL22oaGPDmMzGBoFQOUlyghpv8GNk
+
+{
+  "client_name": "Sophie Müller",
+  "client_email": "sophie@mail.de",
+  "client_phone": "0171 234 56 78",
+  "client_address": "22 Fichtenstraße, 44139 Dortmund",
+  "description": "Austausch der Heizungsanlage",
+  "tva_rate": 19,
+  "lang": "de",
+  "lignes": [
+    {"description": "Ausbau alte Heizung", "quantity": 1, "unit_price": 120},
+    {"description": "Viessmann Gaskessel 24kW", "quantity": 1, "unit_price": 1480},
+    {"description": "Montage und Anschluss", "quantity": 1, "unit_price": 380},
+    {"description": "Arbeitszeit", "quantity": 3, "unit_price": 80}
+  ]
+}
+
+###
+
+### 6. Liste tous les devis
+GET http://localhost:3001/api/devis
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiZW1haWwiOiJ0ZXN0QGRldmlzcHJvLmRlIiwiY29tcGFueSI6IktsZW1wbmVyZWkgVGVzdCIsImlhdCI6MTc3NzQ1NjIyNCwiZXhwIjoxNzc4MDYxMDI0fQ.hvFijjdVTM86oFnL22oaGPDmMzGBoFQOUlyghpv8GNk
+
+###
+
+### 7. Un devis par ID (remplace 1 par l'id reçu)
+GET http://localhost:3001/api/devis/1
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiZW1haWwiOiJ0ZXN0QGRldmlzcHJvLmRlIiwiY29tcGFueSI6IktsZW1wbmVyZWkgVGVzdCIsImlhdCI6MTc3NzQ1NjIyNCwiZXhwIjoxNzc4MDYxMDI0fQ.hvFijjdVTM86oFnL22oaGPDmMzGBoFQOUlyghpv8GNk
+
+###
+
+### 8. Modifier un devis
+PUT http://localhost:3001/api/devis/1
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiZW1haWwiOiJ0ZXN0QGRldmlzcHJvLmRlIiwiY29tcGFueSI6IktsZW1wbmVyZWkgVGVzdCIsImlhdCI6MTc3NzQ1NjIyNCwiZXhwIjoxNzc4MDYxMDI0fQ.hvFijjdVTM86oFnL22oaGPDmMzGBoFQOUlyghpv8GNk
+
+{
+  "client_name": "Sophie Müller Updated",
+  "tva_rate": 19,
+  "lignes": [
+    {"description": "Ausbau alte Heizung", "quantity": 1, "unit_price": 150},
+    {"description": "Viessmann Gaskessel 24kW", "quantity": 1, "unit_price": 1600},
+    {"description": "Montage und Anschluss", "quantity": 1, "unit_price": 400}
+  ]
+}
+
+###
+
+### 9. Changer le statut → sent
+PATCH http://localhost:3001/api/devis/1/status
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiZW1haWwiOiJ0ZXN0QGRldmlzcHJvLmRlIiwiY29tcGFueSI6IktsZW1wbmVyZWkgVGVzdCIsImlhdCI6MTc3NzQ1NjIyNCwiZXhwIjoxNzc4MDYxMDI0fQ.hvFijjdVTM86oFnL22oaGPDmMzGBoFQOUlyghpv8GNk
+
+{
+  "status": "sent"
+}
+
+###
+
+### 10. Changer le statut → accepted
+PATCH http://localhost:3001/api/devis/1/status
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiZW1haWwiOiJ0ZXN0QGRldmlzcHJvLmRlIiwiY29tcGFueSI6IktsZW1wbmVyZWkgVGVzdCIsImlhdCI6MTc3NzQ1NjIyNCwiZXhwIjoxNzc4MDYxMDI0fQ.hvFijjdVTM86oFnL22oaGPDmMzGBoFQOUlyghpv8GNk
+
+{
+  "status": "accepted"
+}
+
+###
+
+### 11. Statistiques
+GET http://localhost:3001/api/devis/stats/summary
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiZW1haWwiOiJ0ZXN0QGRldmlzcHJvLmRlIiwiY29tcGFueSI6IktsZW1wbmVyZWkgVGVzdCIsImlhdCI6MTc3NzQ1NjIyNCwiZXhwIjoxNzc4MDYxMDI0fQ.hvFijjdVTM86oFnL22oaGPDmMzGBoFQOUlyghpv8GNk
+
+###
+
+### 12. Supprimer un devis (remplace 1 par l'id)
+DELETE http://localhost:3001/api/devis/1
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiZW1haWwiOiJ0ZXN0QGRldmlzcHJvLmRlIiwiY29tcGFueSI6IktsZW1wbmVyZWkgVGVzdCIsImlhdCI6MTc3NzQ1NjIyNCwiZXhwIjoxNzc4MDYxMDI0fQ.hvFijjdVTM86oFnL22oaGPDmMzGBoFQOUlyghpv8GNk
