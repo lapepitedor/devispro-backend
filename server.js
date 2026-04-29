@@ -22,6 +22,7 @@ app.use(express.urlencoded({ extended: true }));
 // ── Routes ──
 app.use("/api/auth", require("./routes/auth"));
 app.use("/api/devis", require("./routes/devis"));
+app.use("/api/artisan", require("./routes/artisan"));
 
 // ── Health check ──
 app.get("/api/health", (req, res) => {

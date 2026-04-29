@@ -16,7 +16,7 @@ db.exec(`
     email       TEXT    NOT NULL UNIQUE,
     password    TEXT    NOT NULL,
     company     TEXT    NOT NULL,
-    siret       TEXT,
+    tax_number  TEXT,
     address     TEXT,
     city        TEXT,
     phone       TEXT,

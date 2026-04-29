@@ -29,14 +29,14 @@ Content-Type: application/json
 
 ### 4. Me (remplace TON_TOKEN par le token reçu au login)
 GET http://localhost:3001/api/auth/me
-Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiZW1haWwiOiJ0ZXN0QGRldmlzcHJvLmRlIiwiY29tcGFueSI6IktsZW1wbmVyZWkgVGVzdCIsImlhdCI6MTc3NzQ1NjIyNCwiZXhwIjoxNzc4MDYxMDI0fQ.hvFijjdVTM86oFnL22oaGPDmMzGBoFQOUlyghpv8GNk
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiZW1haWwiOiJ0ZXN0QGRldmlzcHJvLmRlIiwiY29tcGFueSI6IktsZW1wbmVyZWkgVGVzdCIsImlhdCI6MTc3NzQ3MDc4MSwiZXhwIjoxNzc4MDc1NTgxfQ.iBxi0b-KQY0dApzUpjmDp0_V0YZjA7R6D1iJV79oOMM
 
 ###
 
 ### 5. Créer un devis
 POST http://localhost:3001/api/devis
 Content-Type: application/json
-Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiZW1haWwiOiJ0ZXN0QGRldmlzcHJvLmRlIiwiY29tcGFueSI6IktsZW1wbmVyZWkgVGVzdCIsImlhdCI6MTc3NzQ1NjIyNCwiZXhwIjoxNzc4MDYxMDI0fQ.hvFijjdVTM86oFnL22oaGPDmMzGBoFQOUlyghpv8GNk
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiZW1haWwiOiJ0ZXN0QGRldmlzcHJvLmRlIiwiY29tcGFueSI6IktsZW1wbmVyZWkgVGVzdCIsImlhdCI6MTc3NzQ3MDc4MSwiZXhwIjoxNzc4MDc1NTgxfQ.iBxi0b-KQY0dApzUpjmDp0_V0YZjA7R6D1iJV79oOMM
 
 {
   "client_name": "Sophie Müller",
@@ -58,20 +58,19 @@ Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiZW1haWwiO
 
 ### 6. Liste tous les devis
 GET http://localhost:3001/api/devis
-Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiZW1haWwiOiJ0ZXN0QGRldmlzcHJvLmRlIiwiY29tcGFueSI6IktsZW1wbmVyZWkgVGVzdCIsImlhdCI6MTc3NzQ1NjIyNCwiZXhwIjoxNzc4MDYxMDI0fQ.hvFijjdVTM86oFnL22oaGPDmMzGBoFQOUlyghpv8GNk
-
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiZW1haWwiOiJ0ZXN0QGRldmlzcHJvLmRlIiwiY29tcGFueSI6IktsZW1wbmVyZWkgVGVzdCIsImlhdCI6MTc3NzQ3MDc4MSwiZXhwIjoxNzc4MDc1NTgxfQ.iBxi0b-KQY0dApzUpjmDp0_V0YZjA7R6D1iJV79oOMM
 ###
 
 ### 7. Un devis par ID (remplace 1 par l'id reçu)
 GET http://localhost:3001/api/devis/1
-Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiZW1haWwiOiJ0ZXN0QGRldmlzcHJvLmRlIiwiY29tcGFueSI6IktsZW1wbmVyZWkgVGVzdCIsImlhdCI6MTc3NzQ1NjIyNCwiZXhwIjoxNzc4MDYxMDI0fQ.hvFijjdVTM86oFnL22oaGPDmMzGBoFQOUlyghpv8GNk
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiZW1haWwiOiJ0ZXN0QGRldmlzcHJvLmRlIiwiY29tcGFueSI6IktsZW1wbmVyZWkgVGVzdCIsImlhdCI6MTc3NzQ3MDc4MSwiZXhwIjoxNzc4MDc1NTgxfQ.iBxi0b-KQY0dApzUpjmDp0_V0YZjA7R6D1iJV79oOMM
 
 ###
 
 ### 8. Modifier un devis
 PUT http://localhost:3001/api/devis/1
 Content-Type: application/json
-Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiZW1haWwiOiJ0ZXN0QGRldmlzcHJvLmRlIiwiY29tcGFueSI6IktsZW1wbmVyZWkgVGVzdCIsImlhdCI6MTc3NzQ1NjIyNCwiZXhwIjoxNzc4MDYxMDI0fQ.hvFijjdVTM86oFnL22oaGPDmMzGBoFQOUlyghpv8GNk
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiZW1haWwiOiJ0ZXN0QGRldmlzcHJvLmRlIiwiY29tcGFueSI6IktsZW1wbmVyZWkgVGVzdCIsImlhdCI6MTc3NzQ3MDc4MSwiZXhwIjoxNzc4MDc1NTgxfQ.iBxi0b-KQY0dApzUpjmDp0_V0YZjA7R6D1iJV79oOMM
 
 {
   "client_name": "Sophie Müller Updated",
@@ -88,7 +87,7 @@ Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiZW1haWwiO
 ### 9. Changer le statut → sent
 PATCH http://localhost:3001/api/devis/1/status
 Content-Type: application/json
-Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiZW1haWwiOiJ0ZXN0QGRldmlzcHJvLmRlIiwiY29tcGFueSI6IktsZW1wbmVyZWkgVGVzdCIsImlhdCI6MTc3NzQ1NjIyNCwiZXhwIjoxNzc4MDYxMDI0fQ.hvFijjdVTM86oFnL22oaGPDmMzGBoFQOUlyghpv8GNk
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiZW1haWwiOiJ0ZXN0QGRldmlzcHJvLmRlIiwiY29tcGFueSI6IktsZW1wbmVyZWkgVGVzdCIsImlhdCI6MTc3NzQ3MDc4MSwiZXhwIjoxNzc4MDc1NTgxfQ.iBxi0b-KQY0dApzUpjmDp0_V0YZjA7R6D1iJV79oOMM
 
 {
   "status": "sent"
@@ -99,7 +98,7 @@ Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiZW1haWwiO
 ### 10. Changer le statut → accepted
 PATCH http://localhost:3001/api/devis/1/status
 Content-Type: application/json
-Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiZW1haWwiOiJ0ZXN0QGRldmlzcHJvLmRlIiwiY29tcGFueSI6IktsZW1wbmVyZWkgVGVzdCIsImlhdCI6MTc3NzQ1NjIyNCwiZXhwIjoxNzc4MDYxMDI0fQ.hvFijjdVTM86oFnL22oaGPDmMzGBoFQOUlyghpv8GNk
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiZW1haWwiOiJ0ZXN0QGRldmlzcHJvLmRlIiwiY29tcGFueSI6IktsZW1wbmVyZWkgVGVzdCIsImlhdCI6MTc3NzQ3MDc4MSwiZXhwIjoxNzc4MDc1NTgxfQ.iBxi0b-KQY0dApzUpjmDp0_V0YZjA7R6D1iJV79oOMM
 
 {
   "status": "accepted"
@@ -109,10 +108,28 @@ Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiZW1haWwiO
 
 ### 11. Statistiques
 GET http://localhost:3001/api/devis/stats/summary
-Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiZW1haWwiOiJ0ZXN0QGRldmlzcHJvLmRlIiwiY29tcGFueSI6IktsZW1wbmVyZWkgVGVzdCIsImlhdCI6MTc3NzQ1NjIyNCwiZXhwIjoxNzc4MDYxMDI0fQ.hvFijjdVTM86oFnL22oaGPDmMzGBoFQOUlyghpv8GNk
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiZW1haWwiOiJ0ZXN0QGRldmlzcHJvLmRlIiwiY29tcGFueSI6IktsZW1wbmVyZWkgVGVzdCIsImlhdCI6MTc3NzQ3MDc4MSwiZXhwIjoxNzc4MDc1NTgxfQ.iBxi0b-KQY0dApzUpjmDp0_V0YZjA7R6D1iJV79oOMM
 
 ###
 
 ### 12. Supprimer un devis (remplace 1 par l'id)
 DELETE http://localhost:3001/api/devis/1
-Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiZW1haWwiOiJ0ZXN0QGRldmlzcHJvLmRlIiwiY29tcGFueSI6IktsZW1wbmVyZWkgVGVzdCIsImlhdCI6MTc3NzQ1NjIyNCwiZXhwIjoxNzc4MDYxMDI0fQ.hvFijjdVTM86oFnL22oaGPDmMzGBoFQOUlyghpv8GNk
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiZW1haWwiOiJ0ZXN0QGRldmlzcHJvLmRlIiwiY29tcGFueSI6IktsZW1wbmVyZWkgVGVzdCIsImlhdCI6MTc3NzQ3MDc4MSwiZXhwIjoxNzc4MDc1NTgxfQ.iBxi0b-KQY0dApzUpjmDp0_V0YZjA7R6D1iJV79oOMM
+
+### Get artisan profile
+GET http://localhost:3001/api/artisan/profile
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiZW1haWwiOiJ0ZXN0QGRldmlzcHJvLmRlIiwiY29tcGFueSI6IktsZW1wbmVyZWkgVGVzdCIsImlhdCI6MTc3NzQ3MDc4MSwiZXhwIjoxNzc4MDc1NTgxfQ.iBxi0b-KQY0dApzUpjmDp0_V0YZjA7R6D1iJV79oOMM
+
+### Update profile
+PUT http://localhost:3001/api/artisan/profile
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiZW1haWwiOiJ0ZXN0QGRldmlzcHJvLmRlIiwiY29tcGFueSI6IktsZW1wbmVyZWkgVGVzdCIsImlhdCI6MTc3NzQ3MDc4MSwiZXhwIjoxNzc4MDc1NTgxfQ.iBxi0b-KQY0dApzUpjmDp0_V0YZjA7R6D1iJV79oOMM
+
+{
+  "company": "Klempnerei Martin Dupont",
+  "tax_number": "123 456 789",
+  "address": "8 Mühlenweg",
+  "city": "44137 Dortmund",
+  "phone": "0231 41 22 87 65",
+  "website": "www.klempnerei-dortmund.de"
+}
