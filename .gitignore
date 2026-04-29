@@ -1,0 +1,5 @@
+node_modules/
+.env
+devispro.db
+devispro.db-shm
+devispro.db-wal
